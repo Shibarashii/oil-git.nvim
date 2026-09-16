@@ -276,7 +276,13 @@ local function parse_output(output, git_root)
 				abs_path = path.remove_trailing_slash(abs_path)
 
 				status[abs_path] = status_code
-				trie.insert(status_trie, abs_path, status_code, git_root, is_directory)
+				trie.insert(
+					status_trie,
+					abs_path,
+					status_code,
+					git_root,
+					is_directory
+				)
 			end
 		end
 
